@@ -1,10 +1,14 @@
-# Getting Started with Create React App
+### Login no app
+| EMAIL | SENHA |
+|---|---|
+| lorrany.abrantes@gmail.com | l12345678 |
+| francisco.shinzato@gmail.com | f12345678 |
+| marcos.barbosa@gmail.com | m12345678 |
+| matheus.almeida@gmail.com | a12345678 |
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+### Scripts disponíveis
 
-## Available Scripts
-
-In the project directory, you can run:
+No diretório do projeto, você pode executar:
 
 ### `npm start`
 
