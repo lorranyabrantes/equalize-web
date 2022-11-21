@@ -11,7 +11,6 @@ const Header = ({ pageTitle, goBack }) => {
     <div style={styles.container}>
       {goBack ? (
         <button
-          testID="go-back-button"
           style={styles.button}
           onClick={goBack}
         >

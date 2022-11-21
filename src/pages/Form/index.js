@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+
 import { toast } from 'react-toastify'
 
 import iconAnon from "../../assets/png/icon-anon.png";
@@ -10,7 +11,8 @@ import Container from "../../components/Container";
 
 import styles from "./styles";
 
-const Form = ({ navigation }) => {
+const Form = () => {
+  
   const [text, setText] = useState("");
 
   const handleSendButton = () => {

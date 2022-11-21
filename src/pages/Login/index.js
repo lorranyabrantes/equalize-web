@@ -1,4 +1,5 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 import { connect } from "react-redux";
 import { bindActionCreators } from "redux";
@@ -18,10 +19,12 @@ import styles from "./styles";
 
 const GET_BY_EMAIL = "https://fiap-equalize.herokuapp.com/employee?email=";
 
-const Login = ({ navigation, addUser }) => {
+const Login = ({  addUser }) => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [isLoading, setIsLoading] = useState(false);
+
+  const navigate = useNavigate();
 
   const goToForm = () => {
     if (email === "") {
@@ -32,12 +35,13 @@ const Login = ({ navigation, addUser }) => {
 
     setIsLoading(true);
 
+    console.log(`${GET_BY_EMAIL}${email}`)
     equalizeApi.get(`${GET_BY_EMAIL}${email}`, (response) => {
       setIsLoading(false);
       const { password: senha } = response.data;
 
       if (senha === password) {
-        navigation.navigate("TabNavigator");
+        navigate("/home");
 
         addUser(response.data);
 
@@ -59,14 +63,13 @@ const Login = ({ navigation, addUser }) => {
       <div>
         <Text style={styles.text}>EQUALIZE</Text>
         <Input
-          testID={"seach-input"}
           style={styles.input}
           placeholder="Endereço de e-mail"
           value={email}
-          onChangeText={(value) => setEmail(value)}
+          onChangeText={(value) => {console.log(value) 
+            setEmail(value)}}
         />
         <Input
-          testID={"seach-input"}
           style={styles.input}
           placeholder="Senha"
           value={password}

@@ -1,5 +1,6 @@
 import React from "react";
 import { connect } from "react-redux";
+import { useNavigate } from "react-router-dom";
 
 import Button from "../../components/Button";
 import Container from "../../components/Container";
@@ -7,8 +8,10 @@ import Text from "../../components/Text";
 
 import styles from "./styles";
 
-const Home = ({ navigation, user }) => {
-  const goToForm = () => navigation.navigate("Form");
+const Home = ({  user }) => {
+  const navigate = useNavigate();
+
+  const goToForm = () => navigate("/form");
 
   const currentUser = user?.user?.[0];
 

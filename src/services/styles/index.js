@@ -18,9 +18,9 @@ export const FONT_SIZES = Object.freeze({
 
 export const FONT_FAMILY = Object.freeze({
   roboto: {
-    regular: "Roboto-Regular",
-    medium: "Roboto-Medium",
-    bold: "Roboto-Bold",
+    regular: "Roboto",
+    medium: "Roboto",
+    bold: "Roboto",
   },
 });
 

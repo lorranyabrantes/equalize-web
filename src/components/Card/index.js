@@ -7,7 +7,7 @@ import styles from "./styles";
 
 const Card = ({ image, name, onPressButton }) => {
   return (
-    <div testID="card" style={styles.container}>
+    <div style={styles.container}>
       <div style={styles.content}>
         {image ? (
           <img

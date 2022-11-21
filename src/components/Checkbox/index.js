@@ -21,7 +21,6 @@ const Checkbox = ({ text, onToggle, defaultChecked }) => {
   return (
     <div style={styles.container}>
       <button
-        testID="checkbox"
         style={{...styles.button,  ...styles.checked}}
         onClick={toggleChecked}
       >
